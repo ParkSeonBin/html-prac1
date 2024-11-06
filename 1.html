@@ -3,25 +3,29 @@
 <head>
   <title>WEB1 - html</title>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1><a href="index.html">Main</a></h1>
-  <ol>
-    <li><a href="1.html">Number Game</a></li>
-    <li><a href="2.html">메롱</a></li>
-    <li><a href="3.html">Login</a></li>
-  </ol>
-  <h2>Nuber Game</h2>
-  <div class="resultParas">
-    <p class="guesses"></p>
-    <p class="lastResult"></p>
-    <p class="lowOrHi"></p>
+  <div id="grid">
+    <ol>
+      <li><a href="1.html">Number Game</a></li>
+      <li><a href="2.html">MeRong</a></li>
+      <li><a href="3.html">Login</a></li>
+    </ol>
+    <div id="article">
+      <h2>Nuber Game</h2>
+      <div class="resultParas">
+        <p class="guesses"></p>
+        <p class="lastResult"></p>
+        <p class="lowOrHi"></p>
+      </div>
+      
+      <label for="guessField">Enter a guess: </label
+      ><input type="text" id="guessField" class="guessField" />
+      <input type="submit" value="Submit guess" class="guessSubmit" />
+    </div>
   </div>
-  
-  <label for="guessField">Enter a guess: </label
-  ><input type="text" id="guessField" class="guessField" />
-  <input type="submit" value="Submit guess" class="guessSubmit" />
-
   <script>let randomNumber = Math.floor(Math.random() * 100) + 1;
 
     const guesses = document.querySelector(".guesses");
