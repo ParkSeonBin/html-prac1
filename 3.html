@@ -7,70 +7,42 @@
 </head>
 <body>
   <h1><a href="index.html">Main</a></h1>
+  <p id="welcomeMessage"></p>
   <div id="grid">
     <ol>
       <li><a href="1.html">Number Game</a></li>
       <li><a href="2.html">MeRong</a></li>
       <li><a href="3.html">Login</a></li>
     </ol>
+
     <div id="article">
       <h2>로그인</h2>
-      <p>비밀이지만 사실 동작은 안함</p>
-      <div id="box">
-        <div id="login">
-          <form action="/login_confirm" method="post">
-            <br />
-            <h4>Id</h4>
-            <input id="id" type="text" name="id" style="border: none" required />
-            <hr />
-            <br />
-            <h4>Password</h4>
+      <div id="login">
+        <!-- input의 유효성 검사를 하려면 form안에 넣어줘야함 -->
+        <!-- <form action="/index.html" method="post"> -->
+          <br />
+          <h4>Id</h4>
+          <input id="id" type="text" name="id" style="border: none" required />
+          <hr /><br />
+          <h4>Password</h4>
             
-            <input
-              id="password"
-              type="password"
-              name="password"
-              style="border: none"
-              required
-            />
-    <button id="show_button" type="button" onclick="show()">show</button>
-            <script>
-              /*비밀번호 show or hide 구현 함수*/
-              function show() {
-                var btn = document.getElementById("show_button");
-                var password = document.getElementById("password");
-                if (btn.innerText == "show") {
-                  password.type = "text";
-                  btn.innerText = "hide";
-                } else {
-                  password.type = "password";
-                  btn.innerText = "show";
-                }
-              }
-            </script>
+          <input id="password" type="password" name="password" style="border: none" required />
+          <button id="show_button" type="button" onclick="show()">show</button>
+      
+          <br /><hr /><br />
 
-            <br />
-            <hr />
-
-            <p class="find">
-              <a href="/find_id">아이디 찾기</a> /
-              <a href="/find_password">비밀번호 재설정</a>
-            </p>
-
-            <button
-              id="login_button"
-              type="submit"
-            >
-              <b>로그인</b>
-            </button>
-          </form>
-          <p>
-            <a id="회원가입" href="/mem_register"><b>회원가입</b></a>
+          <button id="login_button" type="submit" ><b>로그인</b></button>
+          <button id="sign_up" href="/mem_register"><b>회원가입</b></a>
+          <br /><br /><br />
+          <p class="find">
+            <a href="/find_id">아이디 찾기</a> /
+            <a href="/find_password">비밀번호 재설정</a>
           </p>
-        </div>
+        <!-- </form> -->
       </div>
+      <script src="login.js"></script>
     </div>
   </div>
-  <br /><br /><br />
+  <p id="last"></p>
 </body>
 </html>
