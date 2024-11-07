@@ -1,20 +1,3 @@
-<!doctype html>
-<html>
-<head>
-  <title>WEB1 - html</title>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1><a href="index.html">Main</a></h1>
-  <p id="welcomeMessage"></p>
-    <div id="grid">
-    <ol>
-      <li><a href="1.html">Number Game</a></li>
-      <li><a href="2.html">MeRong</a></li>
-      <li><a href="3.html">Login</a></li>
-    </ol>
-    <div id="article">
       <p></p>
       <input id="night_day" type="button" value="night" onclick="
         if(document.querySelector('#night_day').value === 'night'){
@@ -40,7 +23,7 @@
           var alist = document.querySelectorAll('a');
           var i = 0;
           while(i < alist.length){
-            alist[i].style.color = 'blue';
+            alist[i].style.color = 'black';
             i = i + 1;
           }
         }
@@ -49,8 +32,3 @@
       <h3>메롱</h3>
       <h4>메롱</h4>
       <p>메롱</p>
-    </div>
-  </div>
-  <p id="last"></p>
-</body>
-</html>

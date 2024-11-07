@@ -22,36 +22,36 @@ body{
   }
   #grid ol{
     padding-left:33px;
+    white-space: nowrap; /* 줄바꿈 방지 */
   }
   #grid #article{
     padding-left:25px;
   }
-
-  #login_button{
-    width:100%;
-    height:33px;
+  #login_button, #sign_up, #logout_button{
+    width: 100%;
+    height: 33px;
     margin: 10px 0 5px 0;
-    color:white;
-    background-color: #C0DFFD;
+    color: white;
     border-radius: 5px;
     border-style: none;
     font-size: 15px;
     font-weight: bold;
     cursor: pointer;
-}
-
-#sign_up{
-  width:100%;
-  height:33px;
-  margin: 10px 0 5px 0;
-  color:white;
-  background-color: #dadee1;
-  border-radius: 5px;
-  border-style: none;
-  font-size: 15px;
-  font-weight: bold;
-  cursor: pointer;
-}
+  }
+  #login_button {
+    background-color: #C0DFFD;
+  }
+  #sign_up {
+    background-color: #dadee1;
+  }
+  #logout_button {
+    background-color: #ffffff;
+    border-style: none;
+    color: rgb(132, 132, 132);
+    text-align: right;
+    padding: 0;
+  margin: 0;
+  }
 
 .find {
   text-align: right;
@@ -78,6 +78,61 @@ body{
   margin: 0;
 }
 
+/* 메뉴 스타일 */
+#menu {
+  font:bold 16px "malgun gothic";
+  width:100%;
+  height:50px;
+  background: #ccc;
+  color:black;
+  line-height: 50px; 
+  margin:0 auto;
+  text-align: center;
+  display: block; /* Flexbox로 메뉴 항목 정렬 */
+  white-space: nowrap; /* 메뉴 항목이 줄바꿈되지 않도록 설정 */
+  position: relative;
+}
+
+#menu ul {
+  display: flex; /* Flexbox로 메뉴 항목 정렬 */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#menu > ul > li {
+	width:120px;
+	position:relative;
+  list-style: none;
+}
+
+#menu > ul > li > ul {
+  width: 130px;
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  font-size: 14px;
+  background: skyblue;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  z-index: 1000;
+}
+
+#menu > ul > li:hover > ul {
+  display:block;
+}
+
+#menu > ul > li > ul > li {
+  padding: 10px;
+  transition: background 0.3s ease;
+}
+
+#menu > ul > li > ul > li:hover {
+  background: orange;
+}
+  
   /* @media(max-width:800px){
     #grid{
       display: block;
